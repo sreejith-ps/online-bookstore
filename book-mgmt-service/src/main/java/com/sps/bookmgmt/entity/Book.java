@@ -1,12 +1,30 @@
 package com.sps.bookmgmt.entity;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "book")
 public class Book {
-	private String name;
-	private String description;
-	private String author;
-	private String type;
-	private double price;
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "isbn")
 	private String isbn;
+	
+	@Column(name = "name")
+	private String name;
+	@Column(name = "description")
+	private String description;
+	@Column(name = "author")
+	private String author;
+	@Column(name = "type")
+	private String type;
+	@Column(name = "price")
+	private double price;
 	
 	public String getName() {
 		return name;

@@ -1,0 +1,5 @@
+spring:
+  h2:
+    console:
+      enabled: true  datasource:    platform: H2
+    url: jdbc:h2:mem:sps
