@@ -1,4 +1,4 @@
-package com.sps.bookmgmt.entity;
+package com.sps.bookmgmt.model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -10,22 +10,38 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "book")
 public class Book {
+	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "isbn")
-	private String isbn;
+	private Long isbn;
 	
 	@Column(name = "name")
 	private String name;
+	
 	@Column(name = "description")
 	private String description;
+	
 	@Column(name = "author")
 	private String author;
+	
 	@Column(name = "type")
 	private String type;
+	
 	@Column(name = "price")
 	private double price;
 	
+	public Book() {}
+	
+	public Book(Long isbn, String name, String description, String author, String type, double price) {
+		super();
+		this.isbn = isbn;
+		this.name = name;
+		this.description = description;
+		this.author = author;
+		this.type = type;
+		this.price = price;
+	}
 	public String getName() {
 		return name;
 	}
@@ -56,10 +72,10 @@ public class Book {
 	public void setPrice(double price) {
 		this.price = price;
 	}
-	public String getIsbn() {
+	public Long getIsbn() {
 		return isbn;
 	}
-	public void setIsbn(String isbn) {
+	public void setIsbn(Long isbn) {
 		this.isbn = isbn;
 	}
 	
