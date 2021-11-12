@@ -42,13 +42,15 @@ public class BookController {
 	}
 
 	@PutMapping("/{isbn}")
-	public ResponseEntity<Book> updateBook(@RequestBody Book book, @PathVariable("isbn") Long bookId) throws ResourceNotFoundException {
+	public ResponseEntity<Book> updateBook(@RequestBody Book book, @PathVariable("isbn") Long bookId) 
+			throws ResourceNotFoundException {
 		Book modifiedBook = bookService.update(book, bookId);
 		return ResponseEntity.ok(modifiedBook);
 	}
 	
 	@DeleteMapping("/{isbn}")
-	public ResponseEntity<HttpStatus> deleteBook(@PathVariable("isbn") Long isbn) throws ResourceNotFoundException {
+	public ResponseEntity<HttpStatus> deleteBook(@PathVariable("isbn") Long isbn) 
+			throws ResourceNotFoundException {
 		bookService.delete(isbn);
 		return ResponseEntity.noContent().build();
 	}
