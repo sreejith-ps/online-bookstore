@@ -1,5 +1,6 @@
 package com.sps.bookmgmt;
 
+import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertSame;
 import static org.mockito.Mockito.times;
@@ -14,6 +15,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 
+import com.sps.bookmgmt.controller.BookController;
 import com.sps.bookmgmt.exception.ResourceNotFoundException;
 import com.sps.bookmgmt.model.Book;
 import com.sps.bookmgmt.repository.BookRepository;
@@ -21,6 +23,17 @@ import com.sps.bookmgmt.service.BookService;
 
 @SpringBootTest
 class BookMgmtServiceApplicationTests {
+	
+	@Autowired
+	private BookController controller;
+	
+
+	@Test
+	void contextLoads() {
+		assertThat(controller).isNotNull();
+	}
+	
+	
 
 	@Autowired
 	private BookService bookService;
@@ -28,9 +41,6 @@ class BookMgmtServiceApplicationTests {
 	@MockBean
 	private BookRepository bookRepository;
 	
-	@Test
-	void contextLoads() {
-	}
 	
 	@Test
 	public void getAllBooksTest() {
