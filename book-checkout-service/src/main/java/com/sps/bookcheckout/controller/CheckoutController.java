@@ -19,14 +19,7 @@ public class CheckoutController {
 	
 	@PostMapping //("/{promoCode}")
 	public TransactionResponse doCheckout(@RequestBody TransactionRequest request) { //, @PathVariable("promoCode") String promotionCode) {
-		
 		return service.applyDiscount(request.getBooks(), request.getPromocode());
 	}
-	
-//	@GetMapping("/{promoCode}")
-//	public TransactionResponse doCheckout(@RequestBody List<Book> books, @PathVariable("promoCode") String promotionCode) {
-//		
-//		return service.applyDiscount(books, promotionCode);
-//	}
 	
 }

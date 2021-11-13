@@ -24,12 +24,9 @@ public class OrderController {
 //		return orderService.saveOrder(order);
 //	}
 	
-	@PostMapping("/checkout/{promoCode}")
+	@PostMapping("/proceedtocheckout/{promoCode}")
 	public String checkoutOrder(@RequestBody TransactionRequest request, @PathVariable("promoCode") String promoCode) {
 		OrderResponse response = orderService.checkoutOrder(request, promoCode);
-		
-		response.getOrders().stream().forEach(t -> System.out.println(t.getName()));
-		System.out.println("Promo code : " + promoCode);
 		return "Total Price : " + response.getTotalPrice();
 	}
 
