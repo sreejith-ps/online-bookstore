@@ -36,7 +36,7 @@ public class OrderService {
 
 	public OrderResponse checkoutOrder(TransactionRequest request, String promoCode) {
 		request.setPromocode(promoCode); 
-		TransactionResponse response = template.postForObject("http://localhost:8083/api/checkout" , request, TransactionResponse.class);
+		TransactionResponse response = template.postForObject("http://checkout-service/api/checkout" , request, TransactionResponse.class);
 		List<Book> books = response.getBooks();
 		List<Order> orders = books.stream().map(book -> new Order(null, book.getIsbn(), book.getName(), book.getQuantity(), book.getDiscount(), book.getPrice())).collect(Collectors.toList());
 		OrderResponse orderResponse = new OrderResponse();
