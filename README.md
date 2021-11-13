@@ -95,7 +95,8 @@ Type information is fetched from a utility method.
   - change isbn format
   - validations (promocode, etc)
   - Population of valid test data
-
+ <hr>
+ 
 ## ROADMAP
   -----------
   - Security implementation
