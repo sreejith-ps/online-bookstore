@@ -1,0 +1,46 @@
+{
+	"info": {
+		"_postman_id": "e17d8401-2b43-4e78-94e8-478eb0bb437f",
+		"name": "order-service",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "orderbooks - order-to-checkout-intercommunication",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"books\" :[\r\n        {\r\n            \"isbn\": 1,\r\n            \"name\": \"Adam Grant\",\r\n            \"description\": \"Think Again\",\r\n            \"author\": \"1-234-56-789\",\r\n            \"type\": \"Classic\",\r\n            \"price\": 39.99,\r\n            \"quantity\":3\r\n        },\r\n        {\r\n            \"isbn\": 2,\r\n            \"name\": \"Adam Grant1\",\r\n            \"description\": \"Think Again1\",\r\n            \"author\": \"1-234-56-788\",\r\n            \"type\": \"Classic\",\r\n            \"price\": 49.99,\r\n            \"quantity\":3\r\n        }\r\n    ],\r\n    \"promocode\": \"sdfs\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8082/api/orders/proceedtocheckout/asadad",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"api",
+						"orders",
+						"proceedtocheckout",
+						"asadad"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

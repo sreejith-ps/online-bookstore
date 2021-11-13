@@ -1,0 +1,90 @@
+{
+	"info": {
+		"_postman_id": "30c710dc-0d99-407a-918d-923aae7e7449",
+		"name": "gateway-service",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "gateway-order-books",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"books\" :[\r\n        {\r\n            \"isbn\": 1,\r\n            \"name\": \"Adam Grant\",\r\n            \"description\": \"Think Again\",\r\n            \"author\": \"1-234-56-789\",\r\n            \"type\": \"Classic\",\r\n            \"price\": 39.99,\r\n            \"quantity\":3\r\n        },\r\n        {\r\n            \"isbn\": 2,\r\n            \"name\": \"Adam Grant1\",\r\n            \"description\": \"Think Again1\",\r\n            \"author\": \"1-234-56-788\",\r\n            \"type\": \"Classic\",\r\n            \"price\": 49.99,\r\n            \"quantity\":3\r\n        }\r\n    ],\r\n    \"promocode\": \"sdfs\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8089/api/orders/checkout/asadad",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8089",
+					"path": [
+						"api",
+						"orders",
+						"checkout",
+						"asadad"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "gateway-checkout-orders",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"books\" :[\r\n        {\r\n            \"isbn\": 1,\r\n            \"name\": \"Adam Grant\",\r\n            \"description\": \"Think Again\",\r\n            \"author\": \"1-234-56-789\",\r\n            \"type\": \"Classic\",\r\n            \"price\": 39.99,\r\n            \"quantity\":3\r\n        },\r\n        {\r\n            \"isbn\": 2,\r\n            \"name\": \"Adam Grant1\",\r\n            \"description\": \"Think Again1\",\r\n            \"author\": \"1-234-56-788\",\r\n            \"type\": \"Classic\",\r\n            \"price\": 49.99,\r\n            \"quantity\":3\r\n        }\r\n    ],\r\n    \"promocode\": \"sdfs\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8089/api/checkout/qweqe",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8089",
+					"path": [
+						"api",
+						"checkout",
+						"qweqe"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "gateway-test-orderservice",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8089/api/orders",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8089",
+					"path": [
+						"api",
+						"orders"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
