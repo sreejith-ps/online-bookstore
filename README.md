@@ -33,6 +33,7 @@ based on the url route.
 
 - Use STS or Command Line
 	- import the project
+	- run the command  `mvn clean install` 
 	- run the command  `mvn spring-boot:run` 
 	- services will be up in below ports
 
