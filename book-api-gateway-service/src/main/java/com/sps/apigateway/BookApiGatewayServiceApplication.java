@@ -1,4 +1,4 @@
-package com.sps.bookcheckout;
+package com.sps.apigateway;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -6,10 +6,10 @@ import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 
 @SpringBootApplication
 @EnableEurekaClient
-public class BookCheckoutServiceApplication {
+public class BookApiGatewayServiceApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(BookCheckoutServiceApplication.class, args);
+		SpringApplication.run(BookApiGatewayServiceApplication.class, args);
 	}
 
 }
