@@ -92,9 +92,8 @@ Below are the main tasks covered in the code committed so far,
  <hr>
    
 
-##Pending implementations
+#Pending implementations
   -----------------------
-  - Docker - in progress
   - Test cases for all the operations. done only for CRUD
   - Add CRUD service to eureka server and access through API gateway
   - Exception Handling
@@ -108,6 +107,7 @@ Below are the main tasks covered in the code committed so far,
   - Security implementation
   - Exception Handling
   - Logging
+  - Tracing
   - Monitoring capabilities
   - Fronend UI for
 	- Admin - CRUD operations
