@@ -31,7 +31,7 @@ services:
     networks:
       - bookstore-network
     environment:
-      - SERVER_PORT=8761
+      - SERVER_PORT=8989
       - SPRING_PROFILES_ACTIVE=docker
 
   book-mgmt-service:
@@ -48,7 +48,7 @@ services:
     networks:
       - bookstore-network
     environment:
-      - SERVER_PORT=4001
+      - SERVER_PORT=8081
       - SPRING_PROFILES_ACTIVE=docker
 
   checkout-service:
@@ -65,7 +65,7 @@ services:
     networks:
       - bookstore-network
     environment:
-      - SERVER_PORT=5001
+      - SERVER_PORT=8083
       - SPRING_PROFILES_ACTIVE=docker
 
 
@@ -83,7 +83,7 @@ services:
     networks:
       - bookstore-network
     environment:
-      - SERVER_PORT=7001
+      - SERVER_PORT=8082
       - SPRING_PROFILES_ACTIVE=docker
 
 
