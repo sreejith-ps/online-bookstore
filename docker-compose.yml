@@ -1,0 +1,92 @@
+version: "3.4"
+
+services:
+
+  service-registry:
+    build:
+      context: ./book-service-registry
+      args:
+        JAR_FILE: service-registry.jar
+      dockerfile: Dockerfile
+    hostname: service-registry
+    image: service-registry
+    container_name: service-registry
+    restart: always
+    ports:
+      - "8762:8762"
+    networks:
+      - bookstore-network
+
+  gateway-service:
+    build:
+      context: ./book-api-gateway-service
+      args:
+        JAR_FILE: gateway-service.jar
+      dockerfile: Dockerfile
+    image: gateway-service
+    container_name: gateway-service
+    hostname: gateway-service
+    ports:
+      - "8989:8989"
+    networks:
+      - bookstore-network
+    environment:
+      - SERVER_PORT=8989
+      - SPRING_PROFILES_ACTIVE=docker
+
+  book-mgmt-service:
+    build:
+      context: ./book-mgmt-service
+      args:
+        JAR_FILE: book-mgmt-service.jar
+      dockerfile: Dockerfile
+    image: book-mgmt-service
+    container_name: book-mgmt-service
+    hostname: book-mgmt-service
+    ports:
+      - "8081:8081"
+    networks:
+      - bookstore-network
+    environment:
+      - SERVER_PORT=8081
+      - SPRING_PROFILES_ACTIVE=docker
+
+  checkout-service:
+    build:
+      context: ./book-checkout-service
+      args:
+        JAR_FILE: checkout-service.jar
+      dockerfile: Dockerfile
+    image: checkout-service
+    container_name: checkout-service
+    hostname: checkout-service
+    ports:
+      - "8083:8083"
+    networks:
+      - bookstore-network
+    environment:
+      - SERVER_PORT=8083
+      - SPRING_PROFILES_ACTIVE=docker
+
+
+  order-service:
+    build:
+      context: ./book-order-service
+      args:
+        JAR_FILE: order-service.jar
+      dockerfile: Dockerfile
+    image: order-service
+    container_name: order-service
+    hostname: order-service
+    ports:
+      - "8082:8082"
+    networks:
+      - bookstore-network
+    environment:
+      - SERVER_PORT=8082
+      - SPRING_PROFILES_ACTIVE=docker
+
+
+networks:
+  bookstore-network:
+    driver: bridge

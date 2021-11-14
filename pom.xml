@@ -18,9 +18,9 @@
     </properties>
 
     <modules>
-        <module>book-mgmt-service</module>
-        <module>book-api-gateway-service</module>
         <module>book-service-registry</module>
+        <module>book-api-gateway-service</module>
+        <module>book-mgmt-service</module>
         <module>book-order-service</module>
         <module>book-checkout-service</module>
     </modules>

@@ -20,12 +20,12 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:8089/api/orders/checkout/asadad",
+					"raw": "http://localhost:8989/api/orders/checkout/asadad",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
-					"port": "8089",
+					"port": "8989",
 					"path": [
 						"api",
 						"orders",
@@ -51,12 +51,12 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:8089/api/checkout/qweqe",
+					"raw": "http://localhost:8989/api/checkout/qweqe",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
-					"port": "8089",
+					"port": "8989",
 					"path": [
 						"api",
 						"checkout",
@@ -72,12 +72,12 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8089/api/orders",
+					"raw": "http://localhost:8989/api/orders",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
-					"port": "8089",
+					"port": "8989",
 					"path": [
 						"api",
 						"orders"

@@ -38,19 +38,30 @@ based on the url route.
 	- services will be up in below ports
 
 
+- Docker (In case of any issues running this due to last minute changes, please refer previous approach)
+	
+	- Start Docker Engine 
+	- run `mvn clean install` at root of project.
+	- run `docker-compose up --build` to start all the containers.
 
 
 ```
-api-gateway-service     : 8089
-service-registry        : 8761
+api-gateway-service     : 8989
+service-registry        : 8762
 book-mgmt-service       : 8081
 order-service           : 8082
 checkout-service        : 8083
 ```
 All the operations have to be tested using the postman collection attached as no UI is implemented due to time constraints.
 
-- Docker imlementation is in progress
+Please ignore data quality in postman collection. 
+   
+#How to test
+-------------------------------------
+All the operations have to be tested using the postman collection attached as no UI is implemented due to time constraints.
+Type information is fetched from a utility method.
 
+Note: please ignore Order entity which is not being used
 <hr>
   
   
@@ -69,12 +80,6 @@ Below are the main tasks covered in the code committed so far,
 - API gateway implementation 
 - Test Cases for CRUD operations
 
-<hr>
-   
-#How to test
--------------------------------------
-All the operations have to be tested using the postman collection attached as no UI is implemented due to time constraints.
-Type information is fetched from a utility method.
 <hr>
    
 #Services Implemented
